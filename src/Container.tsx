@@ -61,6 +61,20 @@ export const Container = <T,>(props: Props): ReactElement => {
             index={index}
           />
           <Node id={node.id} depth={props.depth} />
+          {props.parentId === treeContext.rootId &&
+            treeContext.topLevelFolderSeparator &&
+            index < view.length - 1 &&
+            (React.isValidElement(treeContext.topLevelFolderSeparator) ? (
+              React.cloneElement(treeContext.topLevelFolderSeparator, {
+                key: `top-level-separator-${node.id}`,
+              })
+            ) : (
+              <li
+                key={`top-level-separator-${node.id}`}
+                role="separator"
+                aria-hidden="true"
+              />
+            ))}
         </React.Fragment>
       ))}
       <Placeholder

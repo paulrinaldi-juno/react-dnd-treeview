@@ -225,3 +225,13 @@ export const rootProps: ArgType = {
     defaultValue: { summary: "undefined" },
   },
 };
+
+export const topLevelFolderSeparator: ArgType = {
+  name: "topLevelFolderSeparator",
+  description:
+    "When truthy, renders content between top-level nodes. Set to `true` to use the default separator or provide a custom React element for full control.",
+  table: {
+    type: { summary: "boolean | ReactElement" },
+    defaultValue: { summary: "false" },
+  },
+};

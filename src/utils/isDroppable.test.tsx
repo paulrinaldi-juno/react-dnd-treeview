@@ -22,6 +22,7 @@ describe("isDroppable", () => {
       enableAnimateExpand: false,
       dropTargetOffset: 0,
       initialOpen: false,
+      topLevelFolderSeparator: false,
       openIds: [],
       onDrop: () => undefined,
       onToggle: () => undefined,

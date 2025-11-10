@@ -140,6 +140,7 @@ export type TreeStateBase<T> = {
   render: NodeRender<T>;
   dragPreviewRender?: DragPreviewRender<T>;
   placeholderRender?: PlaceholderRender<T>;
+  topLevelFolderSeparator?: boolean | ReactElement;
   onDragStart?: (node: NodeModel<T>, monitor: DragSourceMonitor) => void;
   onDragEnd?: (node: NodeModel<T>, monitor: DragSourceMonitor) => void;
 };
@@ -154,6 +155,7 @@ export type TreeState<T> = TreeStateBase<T> & {
   enableAnimateExpand: boolean;
   dropTargetOffset: number;
   initialOpen: InitialOpen;
+  topLevelFolderSeparator: boolean | ReactElement;
   openIds: NodeModel["id"][];
   onDrop: DropHandler<T>;
   canDrop?: CanDropHandler;

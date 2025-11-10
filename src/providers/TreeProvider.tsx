@@ -46,6 +46,7 @@ export const TreeProvider = <T,>(props: Props<T>): ReactElement => {
     enableAnimateExpand: false,
     dropTargetOffset: 0,
     initialOpen: false,
+    topLevelFolderSeparator: false,
     ...props,
     openIds,
     onDrop: (dragSource, dropTargetId, placeholderIndex) => {
